@@ -23,7 +23,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href=""
+                href="/packages"
                 className="text-cyan-500 hover:text-cyan-600 font-semibold"
               >
                 Packages

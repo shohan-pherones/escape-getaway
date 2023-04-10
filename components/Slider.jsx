@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 
 const images = [
   {
@@ -22,46 +23,48 @@ const images = [
 const Slider = () => {
   const [currentState, setCurrentState] = useState(0);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     if (currentState === 3) {
-  //       setCurrentState(0);
-  //     } else {
-  //       setCurrentState(currentState + 1);
-  //     }
-  //   }, 10000);
-  // }, [currentState]);
+  useEffect(() => {
+    setTimeout(() => {
+      if (currentState === 3) {
+        setCurrentState(0);
+      } else {
+        setCurrentState(currentState + 1);
+      }
+    }, 10000);
+  }, [currentState]);
 
   const bgImageStyle = {
     backgroundImage: `url(${images[currentState].src})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
-    height: "100%",
   };
 
-  const goToNext = (currentState) => {
+  const goToNext = useCallback((currentState) => {
     setCurrentState(currentState);
-  };
+  }, []);
 
   return (
-    <div className="h-[37rem] relative">
-      <div style={bgImageStyle}></div>
+    <div className="relative">
+      <div style={bgImageStyle} className="h-[calc(100vh-5rem)]"></div>
       <div className="description w-full absolute z-10 top-3 left-3 md:top-8 md:left-10 lg:top-10 lg:left-10">
         <div>
           <div className="container mx-auto flex flex-col gap-2 md:gap-5 lg:gap-8">
-            <h1 className="text-4xl md:text-6xl font-bold pt-20">
+            <h1 className="text-5xl lg:text-8xl font-bold pt-20 text-white uppercase">
               Adventure awaits, let us plan your escape
             </h1>
-            <p className="w-3/4 md:font-semibold">
-              The provided words are potential options for a travel agency
+            <p className="w-3/4 text-lg font-medium text-white">
+              {`The provided words are potential options for a travel agency
               website. They highlight the agency's focus on adventure and
               relaxation, personalized itineraries, expertise, diversity of
               travel options, commitment to sustainability, convenience, and
-              creating memorable experiences for customers.
+              creating memorable experiences for customers.`}
             </p>
-            <button className="border border-cyan-600 bg-cyan-600 text-white p-2 md:p-3 lg:p-4 w-60 rounded-lg hover:bg-cyan-700">
-              More information
-            </button>
+            <Link
+              href="/packages"
+              className="bg-black/10 self-start py-5 px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
+            >
+              Explore our packages
+            </Link>
           </div>
         </div>
         <div className="flex gap-3 text-center">
