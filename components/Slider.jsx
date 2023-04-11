@@ -16,7 +16,7 @@ const images = [
   },
   {
     id: 4,
-    src: "https://res.cloudinary.com/doo2ywmrb/image/upload/v1681141277/escape-getaway/pexels-photo-5029301_rkkyr5.jpg",
+    src: "https://images.pexels.com/photos/287240/pexels-photo-287240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 
