@@ -22,15 +22,15 @@ const images = [
 const Slider = () => {
   const [currentState, setCurrentState] = useState(0);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     if (currentState === 3) {
-  //       setCurrentState(0);
-  //     } else {
-  //       setCurrentState(currentState + 1);
-  //     }
-  //   }, 10000);
-  // }, [currentState]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (currentState === 3) {
+        setCurrentState(0);
+      } else {
+        setCurrentState(currentState + 1);
+      }
+    }, 10000);
+  }, [currentState]);
 
   const bgImageStyle = {
     backgroundImage: `url(${images[currentState].src})`,
