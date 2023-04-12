@@ -1,13 +1,13 @@
 import PackageItem from "@/components/PackageItem";
-import { data } from "@/data/data";
+import { getAllPackages } from "@/prisma/packages";
 
-const Packeges = () => {
+const Packeges = ({ packages }) => {
   return (
     <div className="packeges container mx-auto justify-center items-center text-center py-10">
       <h1 className="text-4xl font-medium">Packegas</h1>
       <div className="packeges-wrpper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 items-center ">
-        {data.map((packege, i) => (
-          <PackageItem key={i} packege={packege} />
+        {packages?.map((packege) => (
+          <PackageItem key={packege.id} packege={packege} />
         ))}
       </div>
     </div>
@@ -15,3 +15,21 @@ const Packeges = () => {
 };
 
 export default Packeges;
+
+/* DO NOT TOUCH THESE CODES */
+export const getStaticProps = async () => {
+  const packages = await getAllPackages();
+
+  const updatedPackages = packages.map((pkg) => ({
+    ...pkg,
+    updatedAt: pkg.updatedAt.toString(),
+    createdAt: pkg.createdAt.toString(),
+  }));
+
+  return {
+    props: {
+      packages: updatedPackages,
+    },
+  };
+};
+/* DO NOT TOUCH THESE CODES */
