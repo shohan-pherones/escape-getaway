@@ -5,9 +5,6 @@ const PackageItem = ({ packege }) => {
   return (
     <div className="packege flex flex-col gap-5 shadow-md rounded-md overflow-hidden">
       <div className="img relative">
-        <span className="absolute top-6 left-0 bg-black/70 text-white px-2 font-semibold">
-          20%off
-        </span>
         <Image
           priority
           unoptimized
