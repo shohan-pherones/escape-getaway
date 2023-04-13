@@ -1,7 +1,0 @@
-{
-  "prisma": {
-    "rolling": [true, 1, 1, 0],
-    "endpoint": null,
-    "providerId": ["shohan#prisma.action#VMIN########"]
-  }
-}
