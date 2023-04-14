@@ -7,17 +7,17 @@ const PackageDetails = ({ singlePackage }) => {
       {singlePackage && (
         <div>
           <div
-            className="image w-full h-[50vh] justify-center items-center flex flex-col bg-cover bg-no-repeat bg-center"
+            className="image w-full h-[60vh] justify-center items-center flex flex-col bg-cover bg-no-repeat bg-center"
             style={{ backgroundImage: `url(${singlePackage.image})` }}
           >
-            <div className="w-full h-full flex justify-center items-center backdrop-blur-md">
-              <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center uppercase italic bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-100">
+            <div className="w-full h-full flex justify-center items-center">
+              <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center uppercase bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-100">
                 {singlePackage.title}
               </span>
             </div>
           </div>
           <div className="details-area container mx-5 md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 py-20">
-            <div className="details-left md:col-span-2 flex flex-col gap-10">
+            <div className="details-left md:col-span-2 flex flex-col gap-5">
               <h1 className="text-2xl font-semibold text-black uppercase">
                 Overview
               </h1>
@@ -42,13 +42,13 @@ const PackageDetails = ({ singlePackage }) => {
               </div>
               <Link
                 href={`/checkout/${singlePackage.id}`}
-                className="w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
+                className="text-center w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
               >
                 Purchase Package
               </Link>
               <Link
                 href="/packages"
-                className="w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
+                className="text-center w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
               >
                 Go Back
               </Link>
