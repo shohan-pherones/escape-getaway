@@ -14,17 +14,14 @@ const Navbar = () => {
         <div className="nav-links">
           <ul className="flex gap-3 md:gap-8 items-center justify-center">
             <li>
-              <Link
-                href=""
-                className="text-cyan-500 hover:text-cyan-600 font-semibold"
-              >
+              <Link href="" className="hover:text-cyan-600 font-semibold">
                 About
               </Link>
             </li>
             <li>
               <Link
                 href="/packages"
-                className="text-cyan-500 hover:text-cyan-600 font-semibold"
+                className="hover:text-cyan-600 font-semibold"
               >
                 Packages
               </Link>
@@ -32,16 +29,13 @@ const Navbar = () => {
             <li>
               <Link
                 href=""
-                className="text-cyan-500 hidden md:block hover:text-cyan-600 font-semibold"
+                className="hidden md:block hover:text-cyan-600 font-semibold"
               >
                 Testimonials
               </Link>
             </li>
             <li>
-              <Link
-                href=""
-                className="text-cyan-500 hover:text-cyan-600 font-semibold"
-              >
+              <Link href="" className=" hover:text-cyan-600 font-semibold">
                 Contact
               </Link>
             </li>
