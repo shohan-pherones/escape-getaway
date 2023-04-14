@@ -1,41 +1,57 @@
 import { getAPackage } from "@/prisma/packages";
+import Link from "next/link";
 
 const PackageDetails = ({ singlePackage }) => {
-  console.log(singlePackage);
   return (
     <>
       {singlePackage && (
         <div>
           <div
-            className="image w-full h-[60vh] justify-center items-center flex flex-col bg-cover bg-no-repeat bg-center"
+            className="image w-full h-[50vh] justify-center items-center flex flex-col bg-cover bg-no-repeat bg-center"
             style={{ backgroundImage: `url(${singlePackage.image})` }}
           >
-            <div class="w-full h-full flex  justify-center items-center backdrop-blur-sm">
-              <span class="text-white text-5xl md:text-7xl font-semibold text-center">
+            <div className="w-full h-full flex justify-center items-center backdrop-blur-md">
+              <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center uppercase italic bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-100">
                 {singlePackage.title}
               </span>
             </div>
           </div>
-          <div className="details-area container mx-5 md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 py-20">
+          <div className="details-area container mx-5 md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 py-20">
             <div className="details-left md:col-span-2 flex flex-col gap-10">
-              <h1 className="text-5xl font-semibold text-black/40">Overview</h1>
-              <p className="text-2xl"> {singlePackage.description}</p>
+              <h1 className="text-2xl font-semibold text-black uppercase">
+                Overview
+              </h1>
+              <p className="text-lg"> {singlePackage.description}</p>
+              <span className="text-xl font-medium text-rose-500">
+                {" "}
+                {singlePackage.tags}
+              </span>
             </div>
-            <div className="details-right md:col-span-1 md:row-auto gap-8 flex flex-col">
-              <div className="flex flex-col gap-5 font-semibold">
-                <span className="text-2xl"> {singlePackage.tags}</span>
-                <span className="text-2xl">Person- {singlePackage.person}</span>
-                <span className="text-2xl text-red-500">
-                  <span className="text-black"> Price- </span>
-                  {singlePackage.price}
+            <div className="details-right md:col-span-1 md:row-auto gap-5 flex flex-col">
+              <div className="flex flex-col gap-3 justify-between font-semibold">
+                <span className="text-3xl text-red-500">
+                  <span className="text-black"> Price: </span>
+                  {singlePackage.price?.toLocaleString("en-US", {
+                    style: "currency",
+                    currency: "BDT",
+                  })}
+                </span>
+                <span className="text-xl">
+                  * Only for {singlePackage.person} person
                 </span>
               </div>
-              <button className="w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75">
-                purchase packages!
-              </button>
-              <button className="w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75">
-                Go to Back
-              </button>
+              <Link
+                href={`/checkout/${singlePackage.id}`}
+                className="w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
+              >
+                Purchase Package
+              </Link>
+              <Link
+                href="/packages"
+                className="w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
+              >
+                Go Back
+              </Link>
             </div>
           </div>
         </div>
