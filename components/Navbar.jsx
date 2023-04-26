@@ -7,7 +7,7 @@ const Navbar = () => {
     <div>
       <div className="container mx-auto flex h-[4rem] md:h-[5rem]  items-center justify-between">
         <div className="logo text-3xl font-bold text-cyan-500">
-          <Link href="/">Esxape-getaway</Link>
+          <Link href="/">Escape-getaway</Link>
         </div>
         <div className="nav-links">
           <ul className="flex gap-3 md:gap-8 items-center justify-center">
