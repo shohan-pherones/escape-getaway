@@ -7,7 +7,7 @@ const PackageDetails = ({ singlePackage }) => {
       {singlePackage && (
         <div>
           <div
-            className="image w-full h-[60vh] justify-center items-center flex flex-col bg-cover bg-no-repeat bg-center"
+            className="image w-full h-[60vh] justify-center items-center flex flex-col bg-cover bg-no-repeat bg-center bg-fixed"
             style={{ backgroundImage: `url(${singlePackage.image})` }}
           >
             <div className="w-full h-full flex justify-center items-center">

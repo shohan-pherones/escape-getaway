@@ -1,16 +1,14 @@
-import Image from "next/image";
-import logo from "../public/images/logo.png";
 import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="container mx-auto flex h-[4rem] md:h-[5rem]  items-center justify-between">
-        <div className="logo text-3xl font-semibold text-cyan-500">
+      <div className="container mx-auto flex h-[5rem]  items-center justify-between">
+        <div className="logo text-xl  md:text-2xl font-semibold text-cyan-500">
           <Link href="/">Escape-getaway</Link>
         </div>
         <div className="nav-links">
-          <ul className="flex gap-3 md:gap-8 items-center justify-center">
+          <ul className="flex gap-5 md:gap-8 items-center justify-center text-sm md:text-lg">
             <li>
               <Link
                 href="/"
@@ -27,7 +25,7 @@ const Navbar = () => {
                 Packages
               </Link>
             </li>
-            <li className="border border-cyan-500 px-3 py-1 sm:py-3 sm:px-4 bg-cyan-500 hover:bg-cyan-600 rounded-lg">
+            <li className="border border-cyan-500   py-3 px-4 bg-cyan-500 hover:bg-cyan-600 rounded-lg duration-300">
               <Link
                 href="/packages"
                 className=" font-semibold duration-300 text-white"
