@@ -61,7 +61,7 @@ const Slider = () => {
             </p>
             <Link
               href="/packages"
-              className="bg-black/10 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-gray-900/90 duration-500 hover:border-white/75"
+              className="bg-black/10 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-gray-900/90 duration-500 hover:border-white/75 mt-4"
             >
               Explore our packages
             </Link>
