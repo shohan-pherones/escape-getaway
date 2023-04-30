@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
+  const { data: session } = useSession();
+
   return (
     <div>
       <div className="container mx-auto flex h-[5rem]  items-center justify-between">
@@ -25,13 +28,23 @@ const Navbar = () => {
                 Packages
               </Link>
             </li>
-            <li className="border border-cyan-500   py-3 px-4 bg-cyan-500 hover:bg-cyan-600 rounded-lg duration-300">
-              <Link
-                href="/packages"
-                className=" font-semibold duration-300 text-white"
-              >
-                Get Started
-              </Link>
+
+            <li>
+              {!session ? (
+                <Link
+                  href="/user/login"
+                  className="font-semibold text-white bg-cyan-500 py-3 px-5 rounded hover:bg-cyan-600 duration-300"
+                >
+                  Sign in
+                </Link>
+              ) : (
+                <Link
+                  href="/user/profile"
+                  className="font-semibold text-white bg-cyan-500 py-3 px-5 rounded hover:bg-cyan-600 duration-300"
+                >
+                  Profile
+                </Link>
+              )}
             </li>
           </ul>
         </div>
