@@ -1,7 +1,20 @@
 import { getAPackage } from "@/prisma/packages";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const PackageDetails = ({ singlePackage }) => {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  const handlePurchase = () => {
+    if (session) {
+      router.push(`/checkout/${singlePackage.id}`);
+    } else {
+      router.push(`/user/login?destination=/checkout/${singlePackage.id}`);
+    }
+  };
+
   return (
     <>
       {singlePackage && (
@@ -40,12 +53,12 @@ const PackageDetails = ({ singlePackage }) => {
                   * Only for {singlePackage.person} person
                 </span>
               </div>
-              <Link
-                href={`/checkout/${singlePackage.id}`}
+              <button
+                onClick={handlePurchase}
                 className="text-center w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
               >
                 Purchase Package
-              </Link>
+              </button>
               <Link
                 href="/packages"
                 className="text-center w-full bg-black/80 self-start p-3 lg:py-5 lg:px-10 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
