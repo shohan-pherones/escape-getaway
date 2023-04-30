@@ -5,7 +5,7 @@ const Checkout = ({ singlePackage }) => {
   return (
     <div className="container mx-auto grid grid-cols-3 gap-10">
       <div
-        className="col-span-2 w-full h-[90vh] justify-center items-center bg-cover bg-no-repeat bg-center relative hidden md:block"
+        className="col-span-2 w-full h-[90vh] justify-center items-center bg-cover bg-no-repeat bg-center relative"
         style={{ backgroundImage: `url(${singlePackage.image})` }}
       >
         <div className="text-sm text-gray-200 absolute bottom-2 p-2">
