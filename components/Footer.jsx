@@ -24,17 +24,17 @@ const Footer = () => {
       <div className="bottom flex justify-between container mx-auto">
         <ul className="flex gap-5">
           <li className="bg-cyan-200/50 w-6 rounded-full h-6 items-center justify-center flex text-cyan-500 hover:text-cyan-600 duration-300">
-            <Link href="">
+            <Link href="/">
               <FaInstagram />
             </Link>
           </li>
           <li className="bg-cyan-200/50 w-6 rounded-full h-6 items-center justify-center flex text-cyan-500 hover:text-cyan-600 duration-300">
-            <Link href="">
+            <Link href="/">
               <BsTwitter />
             </Link>
           </li>
           <li className="bg-cyan-200/50 w-6 rounded-full h-6 items-center justify-center flex text-cyan-500 hover:text-cyan-600 duration-300">
-            <Link href="">
+            <Link href="/">
               <FaFacebookF />
             </Link>
           </li>
@@ -51,10 +51,34 @@ const Footer = () => {
           </li>
           <li className="text-sm text-gray-900/50">
             <Link
-              href=""
+              href="/packages"
               className="hover:text-cyan-600 font-semibold duration-300"
             >
-              Contact Us
+              Packages
+            </Link>
+          </li>
+          <li className="text-sm text-gray-900/50">
+            <Link
+              href="/testimonials"
+              className="hover:text-cyan-600 font-semibold duration-300"
+            >
+              Testimonials
+            </Link>
+          </li>
+          <li className="text-sm text-gray-900/50">
+            <Link
+              href="/about"
+              className="hover:text-cyan-600 font-semibold duration-300"
+            >
+              About
+            </Link>
+          </li>
+          <li className="text-sm text-gray-900/50">
+            <Link
+              href="/contact"
+              className="hover:text-cyan-600 font-semibold duration-300"
+            >
+              Contact
             </Link>
           </li>
         </ul>

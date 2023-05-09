@@ -1,12 +1,14 @@
 import HeroSection from "@/components/HeroSection";
 import Packeges from "./packages";
 import { getAllPackages } from "@/prisma/packages";
+import Testimonials from "./testimonials";
 
 const HomePage = ({ packages }) => {
   return (
     <div>
       <HeroSection />
       <Packeges packages={packages} />
+      <Testimonials />
     </div>
   );
 };

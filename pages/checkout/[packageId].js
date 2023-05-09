@@ -45,7 +45,7 @@ const Checkout = ({ singlePackage }) => {
 
     console.log(formData);
 
-    /* PAYMENT IMPLEMENTATION GOES HERE*/
+    /* AXIOS POST REQ. GOES HERE*/
   };
 
   return (
