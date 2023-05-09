@@ -28,6 +28,30 @@ const Navbar = () => {
                 Packages
               </Link>
             </li>
+            <li>
+              <Link
+                href="/testimonials"
+                className="hover:text-cyan-600 font-semibold duration-300"
+              >
+                Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className="hover:text-cyan-600 font-semibold duration-300"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="hover:text-cyan-600 font-semibold duration-300"
+              >
+                Contact
+              </Link>
+            </li>
 
             <li>
               {!session ? (
