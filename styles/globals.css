@@ -18,3 +18,66 @@ body {
   left: 0;
   background-image: linear-gradient(transparent, rgba(0 0 0/0.9));
 }
+
+.text-design-left::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  background-image: linear-gradient(
+    to right,
+    rgba(6, 182, 212, 0.5),
+    transparent
+  );
+}
+.text-design-right::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2rem;
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to left,
+    rgba(6, 182, 212, 0.5),
+    transparent
+  );
+}
+.card1 {
+  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-img-1_gc01aq.webp");
+  height: 23rem;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.card2 {
+  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-pic2_iqxfok.webp");
+  height: 23rem;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.card3 {
+  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-pic3_ztdtcd.webp");
+  height: 23rem;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.card4 {
+  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-pic3_ztdtcd.webp");
+  height: 23rem;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.card5 {
+  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-last_zcxqux.webp");
+  height: 23rem;
+
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+}
