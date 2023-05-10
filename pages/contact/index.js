@@ -18,7 +18,7 @@ const Contact = () => {
             <input
               type="text"
               placeholder="James vince"
-              className="outline-none ml-5"
+              className="outline-none border p-3 w-full"
             />
           </div>
           <div className="grid gap-3">
@@ -28,7 +28,7 @@ const Contact = () => {
             <input
               type="email"
               placeholder="xyz@gmail.com"
-              className="outline-none ml-5"
+              className="outline-none  border p-3 w-full"
             />
           </div>
         </div>
@@ -41,7 +41,7 @@ const Contact = () => {
             placeholder="tell usabout your travel plan"
             cols="30"
             rows="10"
-            className="outline-none ml-5"
+            className="outline-none  border p-3 w-full resize-none"
           />
         </div>
       </div>
