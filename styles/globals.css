@@ -81,3 +81,15 @@ body {
   width: 100%;
   background-size: cover;
 }
+
+.faq-content {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-content-show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s ease;
+}
