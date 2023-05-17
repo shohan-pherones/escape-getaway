@@ -1,6 +1,11 @@
 import { getAPackage } from "@/prisma/packages";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+
+/* STRIPE PROMISE */
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
 const Checkout = ({ singlePackage }) => {
   const { data: session } = useSession();
@@ -43,9 +48,28 @@ const Checkout = ({ singlePackage }) => {
   const handleCheckout = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    const stripe = await stripePromise;
 
-    /* AXIOS POST REQ. GOES HERE*/
+    // Call the backend to create a checkout session
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      items: [singlePackage],
+      name: formData.name,
+      email: formData.email,
+      mobile: formData.mobile,
+      address: formData.address,
+      person: formData.person,
+      tourDate: formData.date,
+      packageName: formData.package,
+    });
+
+    // Redirect user to stripe checkout
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+
+    if (result.error) {
+      console.log(result.error.message);
+    }
   };
 
   return (
@@ -58,6 +82,7 @@ const Checkout = ({ singlePackage }) => {
           {singlePackage.description}
         </div>
       </div>
+
       <form
         onSubmit={handleCheckout}
         className="flex flex-col 2xl:col-span-1 gap-5 justify-center px-10 xl:col-span-1"
@@ -70,6 +95,7 @@ const Checkout = ({ singlePackage }) => {
           placeholder="Your Name"
           className="border-b outline-none p-2"
           required
+          readOnly
         />
         <input
           value={formData.email}
@@ -78,6 +104,7 @@ const Checkout = ({ singlePackage }) => {
           placeholder="Your Email"
           className=" border-b outline-none p-2"
           required
+          readOnly
         />
         <input
           value={formData.mobile}
@@ -135,6 +162,7 @@ const Checkout = ({ singlePackage }) => {
         </span>
 
         <button
+          role="link"
           type="submit"
           className="text-center w-full bg-black/80 self-start p-3 lg:py-3 lg:px-10 text-white uppercase tracking-widest font-medium border border-white/50 rounded-lg inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black/90 duration-500 hover:border-white/75"
         >
