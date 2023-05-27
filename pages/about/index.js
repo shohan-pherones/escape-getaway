@@ -138,9 +138,10 @@ const AboutPage = () => {
         <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold leading-tight  sm:leading-tight lg:leading-tight relative text-design-left inline-block">
           The Beauty of Our Differences
         </h1>
-        <p className="text-3xl font-semibold">
-          we take pride in our ability to customize travel packages according to
-          our clients' requirements.
+
+        <p className="text-gray-500 font-semibold">
+          {`We take pride in our ability to customize travel packages according to
+          our clients' requirements.`}
         </p>
         <p className="text-xl">
           We believe that our attention to detail and personalized approach sets

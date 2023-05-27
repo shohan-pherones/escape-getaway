@@ -30,13 +30,13 @@ const data = [
 ];
 
 const Faqs = ({}) => {
-  const [selected, useSelected] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
     if (selected === i) {
-      return useSelected(null);
+      setSelected(null);
     } else {
-      useSelected(i);
+      setSelected(i);
     }
   };
 
@@ -47,11 +47,14 @@ const Faqs = ({}) => {
         <h2 className="text-5xl font-medium uppercase text-cyan-500">
           Frequantly asked qustions
         </h2>
-        <p className="text-lg">Have question? we're here to help.</p>
+        <p className="text-lg">{`Have question? we're here to help.`}</p>
       </div>
       <div className="grid items-center justify-center w-[50rem] mx-auto gap-5">
         {data.map((faq, i) => (
-          <div className="grid items-center justify-center border-b-2 mb-5">
+          <div
+            key={i}
+            className="grid items-center justify-center border-b-2 mb-5"
+          >
             <div className="flex justify-between" onClick={() => toggle(i)}>
               <h3 className="text-lg font-semibold">{faq.question}</h3>
               <span>
