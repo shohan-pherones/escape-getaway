@@ -26,7 +26,12 @@ const ProfilePage = ({ session }) => {
   }
 
   return (
-    <div className="min-h-screen my-20 flex flex-col gap-5 items-center">
+    <div
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      className="min-h-screen my-20 flex flex-col gap-5 items-center"
+    >
       <Image
         src={session.user.image}
         width={50}
