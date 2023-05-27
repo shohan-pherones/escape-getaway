@@ -2,7 +2,12 @@ import { ImQuotesLeft } from "react-icons/im";
 
 const Testimonial = ({ testimonial }) => {
   return (
-    <div className="grid shadow-lg rounded-lg px-5 mb-10 gap-10 justify-center ">
+    <div
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      className="grid shadow-md rounded-md px-5 mb-10 gap-10 justify-center "
+    >
       <div className="py-10 mt-10 h-[21.5rem]">
         <ImQuotesLeft className="text-lg mb-2" />
         <p>{testimonial.para}</p>
