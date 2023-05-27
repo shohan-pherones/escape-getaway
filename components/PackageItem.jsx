@@ -3,7 +3,12 @@ import Link from "next/link";
 
 const PackageItem = ({ packege }) => {
   return (
-    <div className="packege flex flex-col gap-5 shadow-md rounded-md overflow-hidden w-full">
+    <div
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      className="packege flex flex-col gap-5 shadow-md rounded-md overflow-hidden w-full"
+    >
       <div className="img relative">
         <Image
           priority

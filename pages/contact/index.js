@@ -10,8 +10,8 @@ const Contact = () => {
         <h2 className="text-4xl  font-semibold text-start">Get in touch 👋🏻</h2>
       </div>
       <div className="py-10 mt-10 mx-auto justify-center ">
-        <div className="flex  justify-between ">
-          <div className="grid gap-3">
+        <div className="flex  gap-5 ">
+          <div className="grid gap-3 w-full">
             <label htmlFor="name" className="mt-5 font-semibold">
               Your name
             </label>
@@ -21,7 +21,7 @@ const Contact = () => {
               className="outline-none border p-3 w-full"
             />
           </div>
-          <div className="grid gap-3">
+          <div className="grid gap-3 w-full">
             <label htmlFor="email" className="mt-5 font-semibold">
               Your email
             </label>
@@ -39,8 +39,8 @@ const Contact = () => {
           <textarea
             name="message"
             placeholder="tell usabout your travel plan"
-            cols="30"
-            rows="10"
+            cols="20"
+            rows="5"
             className="outline-none  border p-3 w-full resize-none"
           />
         </div>

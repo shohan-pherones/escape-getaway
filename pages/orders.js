@@ -62,6 +62,15 @@ export const getServerSideProps = async (context) => {
     },
   });
 
+  if (!session || !customer) {
+    return {
+      redirect: {
+        destination: "/user/login",
+        permanent: false,
+      },
+    };
+  }
+
   const updatedCustomer = {
     ...customer,
     updatedAt: customer.updatedAt.toString(),
@@ -72,15 +81,6 @@ export const getServerSideProps = async (context) => {
       createdAt: order.createdAt.toString(),
     })),
   };
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/user/login",
-        permanent: false,
-      },
-    };
-  }
 
   return {
     props: { session, customer: updatedCustomer },
