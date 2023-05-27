@@ -128,8 +128,8 @@ const AboutPage = () => {
           The Beauty of Our Differences
         </h1>
         <p className="text-gray-500 font-semibold">
-          We take pride in our ability to customize travel packages according to
-          our clients' requirements.
+          {`We take pride in our ability to customize travel packages according to
+          our clients' requirements.`}
         </p>
         <p className="text-gray-400">
           We believe that our attention to detail and personalized approach sets

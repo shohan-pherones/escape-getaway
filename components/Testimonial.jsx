@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ImQuotesLeft } from "react-icons/im";
 
 const Testimonial = ({ testimonial }) => {
@@ -13,10 +14,13 @@ const Testimonial = ({ testimonial }) => {
         <p>{testimonial.para}</p>
       </div>
       <div className="flex gap-5 p-5 items-center h-[7.25rem] ">
-        <img
+        <Image
+          priority
           src={testimonial.img}
           className="w-16 h-16 rounded-full"
           alt={testimonial.name}
+          height={50}
+          width={50}
         />
         <div className="justify-center items-center">
           <p className="uppercase font-semibold tracking-wider">
