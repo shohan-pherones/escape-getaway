@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply text-gray-700;
+  @apply text-gray-700 overflow-x-hidden;
 }
 
 .package-image::before {
@@ -33,6 +33,7 @@ body {
     rgba(6, 182, 212, 0.5),
     transparent
   );
+  rotate: -3deg;
 }
 .text-design-right::before {
   content: "";
@@ -45,41 +46,54 @@ body {
   right: 0;
   background-image: linear-gradient(
     to left,
-    rgba(6, 182, 212, 0.5),
+    rgba(14, 196, 228, 0.918),
     transparent
   );
 }
-.card1 {
-  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-img-1_gc01aq.webp");
-  height: 23rem;
-  object-fit: cover;
-  background-repeat: no-repeat;
+.card {
+  height: 20rem;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
-.card2 {
-  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-pic2_iqxfok.webp");
-  height: 23rem;
-  object-fit: cover;
-  background-repeat: no-repeat;
-}
-.card3 {
-  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-pic3_ztdtcd.webp");
-  height: 23rem;
-  object-fit: cover;
-  background-repeat: no-repeat;
-}
-.card4 {
-  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-pic3_ztdtcd.webp");
-  height: 23rem;
-  object-fit: cover;
-  background-repeat: no-repeat;
-}
-.card5 {
-  background-image: url("https://res.cloudinary.com/doo2ywmrb/image/upload/v1683717368/escape-getaway/card-last_zcxqux.webp");
-  height: 23rem;
-
-  background-repeat: no-repeat;
+.card::before {
   width: 100%;
-  background-size: cover;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.card::after {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  background-image: linear-gradient(45deg, #b4e9f2, #83dbea, #51cce1, #38c5dd);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  clip-path: circle(20% at 90% 10%);
+  transition: 0.2s;
+}
+
+.card:nth-child(2)::after {
+  background: #9be2ee;
+  background-image: linear-gradient(160deg, #9be2ee 0%, #047f94 100%);
+}
+.card:nth-child(4)::after {
+  background: #9be2ee;
+  background-image: linear-gradient(160deg, #9be2ee 0%, #047f94 100%);
+}
+
+.card:hover::after {
+  clip-path: circle(100%);
+  transition: all 2s;
 }
 
 .faq-content {
