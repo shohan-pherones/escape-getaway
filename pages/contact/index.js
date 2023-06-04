@@ -1,8 +1,65 @@
-import Link from "next/link";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_vgjljcl",
+        "template_e9yrtor",
+        form.current,
+        "t5Pz4uUfxgdWFtoTd"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+
+          console.log("message sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const submitHandler = () => {
+    if (sendEmail) {
+      toast.success("Email sent!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      toast.error("Something went wrong!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
+
   return (
-    <div className="container mx-auto px-5 p-48 w-1/2 justify-center  text-start ">
+    <form
+      ref={form}
+      onSubmit={sendEmail}
+      className="container mx-auto px-5 p-44 w-1/2 justify-center  text-start "
+    >
       <div className="grid justify- ">
         <h2 className="text-4xl  font-semibold text-start">
           Love to hear from you,
@@ -45,13 +102,15 @@ const Contact = () => {
           />
         </div>
       </div>
-      <Link
-        href={"/"}
+      <button
+        onClick={submitHandler}
+        type="submit"
+        value="Send"
         className="text-center bg-black/90 self-start p-3 lg:py-3 lg:px-44 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-sm inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black duration-500 hover:border-white/75"
       >
         Send
-      </Link>
-    </div>
+      </button>
+    </form>
   );
 };
 
