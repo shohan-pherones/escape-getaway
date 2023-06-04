@@ -2,7 +2,7 @@ import Slider from "./Slider";
 
 const HeroSection = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="">
       <Slider />
     </div>
   );

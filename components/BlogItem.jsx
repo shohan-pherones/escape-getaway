@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const BlogItem = ({ blog }) => {
   return (
-    <div className="w-[35rem]  overflow-hidden sm:flex items-center">
+    <div className="w-[30rem]  overflow-hidden sm:flex items-center">
       <Link href={`/blog/${blog.id}`}>
         <div className="w-[18rem] h-[11rem] overflow-hidden">
           <Image

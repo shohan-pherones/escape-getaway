@@ -44,7 +44,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul className="flex gap-5">
+        <ul className="md:flex gap-5">
           <li className="text-sm text-gray-900/50">
             <Link
               href="/"
@@ -75,6 +75,14 @@ const Footer = () => {
               className="hover:text-cyan-600 font-semibold duration-300"
             >
               About
+            </Link>
+          </li>
+          <li className="text-sm text-gray-900/50">
+            <Link
+              href="/user/faq"
+              className="hover:text-cyan-600 font-semibold duration-300"
+            >
+              Faq
             </Link>
           </li>
           <li className="text-sm text-gray-900/50">
