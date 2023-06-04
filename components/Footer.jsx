@@ -6,7 +6,11 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="mt-14 flex flex-col gap-10 border-t py-10">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      className="mt-14 flex flex-col gap-10 border-t py-10"
+    >
       <div className="top flex w-full justify-between container mx-auto">
         <div>
           <p className="text-cyan-500 text-xl font-medium pb-3 hover:text-cyan-600 duration-300">

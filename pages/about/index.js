@@ -15,7 +15,12 @@ const img5 =
 const AboutPage = () => {
   return (
     <div className="py-20 container mx-auto px-5 md:px-0">
-      <div className="heading text-3xl sm:text-5xl lg:text-7xl w-4/6 font-semibold leading-tight  sm:leading-tight lg:leading-tight">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        className="heading text-3xl sm:text-5xl lg:text-7xl w-4/6 font-semibold leading-tight  sm:leading-tight lg:leading-tight"
+      >
         <span className="text-design-left relative"> We provide</span>
         <span className="text-design-right relative"> Unforgettable</span>
         <span> Journeys </span>
@@ -24,9 +29,15 @@ const AboutPage = () => {
       </div>
 
       {/* image section */}
-      <div className="h-auto md:h-[80rem] lg:h-[30rem] grid md:grid-cols-2 lg:grid-cols-5 gap-5 my-16">
+      <div
+        data-aos-delay="200"
+        data-aos-duration="2000"
+        className="h-auto md:h-[80rem] lg:h-[30rem] grid md:grid-cols-2 lg:grid-cols-5 gap-5 my-16"
+      >
         <div className="flex items-start md:col-span-1 lg:col-span-1">
           <Image
+            data-aos="fade-right"
+            data-aos-duration="1000"
             priority
             unoptimized
             src={img1}
@@ -39,6 +50,8 @@ const AboutPage = () => {
         </div>
         <div className="flex items-end md:col-span-1 lg:col-span-1">
           <Image
+            data-aos="fade-up"
+            data-aos-duration="1000"
             priority
             unoptimized
             src={img2}
@@ -51,6 +64,8 @@ const AboutPage = () => {
         </div>
         <div className="flex items-center md:col-span-1 lg:col-span-1">
           <Image
+            data-aos="fade-down"
+            data-aos-duration="1000"
             priority
             unoptimized
             src={img3}
@@ -63,6 +78,8 @@ const AboutPage = () => {
         </div>
         <div className="flex items-start md:col-span-1 lg:col-span-1">
           <Image
+            data-aos="fade-up"
+            data-aos-duration="1000"
             priority
             unoptimized
             src={img4}
@@ -75,6 +92,8 @@ const AboutPage = () => {
         </div>
         <div className="flex items-center md:col-span-1 lg:col-span-1">
           <Image
+            data-aos="fade-left"
+            data-aos-duration="1000"
             priority
             unoptimized
             src={img5}
@@ -87,7 +106,11 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="space-y-4 border-b pb-5">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="space-y-4 border-b pb-5"
+      >
         <h1 className="text-3xl sm:text-4xl lg:text-5xl w-4/6 font-semibold leading-tight  sm:leading-tight lg:leading-tight">
           The art of visual storytelling
         </h1>
@@ -106,7 +129,11 @@ const AboutPage = () => {
         </p>
       </div>
 
-      <div className="my-16 space-y-4">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="my-16 space-y-4"
+      >
         <h1 className="text-3xl sm:text-5xl lg:text-7xl w-4/6 font-semibold leading-tight  sm:leading-tight lg:leading-tight">
           <span className="text-design-left relative">EscapeGetaway</span> - 5
           Things we value
@@ -115,7 +142,12 @@ const AboutPage = () => {
           Strong values that bring great people together
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:gap-10 gap-5 pb-16 text-3xl font-medium ">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:gap-10 gap-5 pb-16 text-3xl font-medium "
+      >
         <div className="card flex items-center p-5">
           <h1 className="">Always be nice and respectful</h1>
         </div>
@@ -134,7 +166,12 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="my-16 space-y-5">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        className="my-16 space-y-5"
+      >
         <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold leading-tight  sm:leading-tight lg:leading-tight relative text-design-left inline-block">
           The Beauty of Our Differences
         </h1>

@@ -3,7 +3,12 @@ import { getAllBlog } from "@/prisma/blog";
 
 const BlogPage = ({ blogs }) => {
   return (
-    <div className="my-16 container mx-auto px-5 lg:px-0">
+    <div
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      className="my-16 container mx-auto px-5 lg:px-0"
+    >
       <div className="flex flex-wrap gap-10 justify-center">
         {blogs?.map((blog) => (
           <BlogItem key={blog.id} blog={blog} />
