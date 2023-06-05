@@ -25,8 +25,8 @@ const Orders = ({ session, customer }) => {
       <div className="container mx-auto py-10 min-h-screen">
         <h2
           className="text-4xl font-semibold py-3"
-          // data-aos="fade-up"
-          // data-aos-duration="1000"
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           Your Order{customer.orders.length > 1 ? "s" : ""}:{" "}
           {customer.orders.length}
@@ -36,6 +36,9 @@ const Orders = ({ session, customer }) => {
           {customer.orders.map((order) => (
             <>
               <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
                 key={order.id}
                 className="grid items-center justify-center w-[38rem] h-80 shadow-md rounded-md space-y-1  p-5"
               >
