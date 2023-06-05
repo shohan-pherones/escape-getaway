@@ -56,60 +56,71 @@ const Contact = () => {
 
   return (
     <form
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="100"
       ref={form}
       onSubmit={sendEmail}
-      className="container mx-auto px-5 p-44 w-1/2 justify-center  text-start "
+      className="container mx-auto  px-5 p-44 w-1/2  justify-center  text-start "
     >
-      <div className="grid justify- ">
-        <h2 className="text-4xl  font-semibold text-start">
-          Love to hear from you,
-        </h2>
-        <h2 className="text-4xl  font-semibold text-start">Get in touch 👋🏻</h2>
-      </div>
-      <div className="py-10 mt-10 mx-auto justify-center ">
-        <div className="flex  gap-5 ">
-          <div className="grid gap-3 w-full">
-            <label htmlFor="name" className="mt-5 font-semibold">
-              Your name
-            </label>
-            <input
-              type="text"
-              placeholder="James vince"
-              className="outline-none border p-3 w-full"
-            />
+      <div className="w-full">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="grid grid-cols-1 gap-2"
+        >
+          <h2 className="text-4xl  font-semibold text-start">
+            Love to hear from you,
+          </h2>
+          <h2 className="text-4xl  font-semibold text-start">
+            Get in touch 👋🏻
+          </h2>
+        </div>
+        <div className="py-10 mt-10 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+            <div className="flex flex-col gap-3 w-full">
+              <label htmlFor="name" className="mt-5 font-semibold">
+                Your name
+              </label>
+              <input
+                type="text"
+                placeholder="James vince"
+                className="outline-none border p-3 w-full"
+              />
+            </div>
+            <div className="flex flex-col gap-3 w-full">
+              <label htmlFor="email" className="mt-5 font-semibold">
+                Your email
+              </label>
+              <input
+                type="email"
+                placeholder="xyz@gmail.com"
+                className="outline-none  border p-3 w-full"
+              />
+            </div>
           </div>
-          <div className="grid gap-3 w-full">
-            <label htmlFor="email" className="mt-5 font-semibold">
-              Your email
+          <div className="flex flex-col">
+            <label htmlFor="message" className="py-5 font-semibold">
+              Message
             </label>
-            <input
-              type="email"
-              placeholder="xyz@gmail.com"
-              className="outline-none  border p-3 w-full"
+            <textarea
+              name="message"
+              placeholder="tell usabout your travel plan"
+              cols="20"
+              rows="5"
+              className="outline-none  border p-3 w-full resize-none"
             />
           </div>
         </div>
-        <div className="flex flex-col">
-          <label htmlFor="message" className="py-5 font-semibold">
-            Message
-          </label>
-          <textarea
-            name="message"
-            placeholder="tell usabout your travel plan"
-            cols="20"
-            rows="5"
-            className="outline-none  border p-3 w-full resize-none"
-          />
-        </div>
+        <button
+          onClick={submitHandler}
+          type="submit"
+          value="Send"
+          className="text-center bg-black/90 self-start p-3 lg:py-3 lg:px-44 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-sm inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black duration-500 hover:border-white/75"
+        >
+          Send
+        </button>
       </div>
-      <button
-        onClick={submitHandler}
-        type="submit"
-        value="Send"
-        className="text-center bg-black/90 self-start p-3 lg:py-3 lg:px-44 text-white uppercase tracking-widest font-semibold border border-white/50 rounded-sm inset-2 appearance-none backdrop-blur-md shadow-lg bg-blend-color-dodge hover:bg-black duration-500 hover:border-white/75"
-      >
-        Send
-      </button>
     </form>
   );
 };

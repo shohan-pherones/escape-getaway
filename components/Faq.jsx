@@ -41,17 +41,40 @@ const Faqs = ({}) => {
   };
 
   return (
-    <div className="container mx-auto justify-center items-center p-16 h-screen">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="container mx-auto justify-center items-center p-16 min-h-screen"
+    >
       <div className="grid items-center justify-center text-center gap-3 py-10 mb-10">
-        <p className="text-md font-semibold">FAQs</p>
-        <h2 className="text-5xl font-medium uppercase text-cyan-500">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="text-md font-semibold"
+        >
+          FAQs
+        </p>
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+          className="text-5xl font-medium uppercase text-cyan-500"
+        >
           Frequantly asked qustions
         </h2>
-        <p className="text-lg">{`Have question? we're here to help.`}</p>
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+          className="text-lg"
+        >{`Have question? we're here to help.`}</p>
       </div>
       <div className="grid items-center justify-center w-[50rem] mx-auto gap-5">
         {data.map((faq, i) => (
           <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="250"
             key={i}
             className="grid items-center justify-center border-b-2 mb-5"
           >
