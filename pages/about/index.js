@@ -14,7 +14,7 @@ const img5 =
 
 const AboutPage = () => {
   return (
-    <div className="py-20 container mx-auto px-5 md:px-0">
+    <main className="py-20 container mx-auto px-5 md:px-0">
       <div
         data-aos="fade-up"
         data-aos-delay="100"
@@ -199,7 +199,7 @@ const AboutPage = () => {
           cherish for a lifetime.
         </p>
       </div>
-    </div>
+    </main>
   );
 };
 

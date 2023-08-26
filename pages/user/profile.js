@@ -26,7 +26,7 @@ const ProfilePage = ({ session }) => {
   }
 
   return (
-    <div
+    <main
       data-aos="fade-up"
       data-aos-delay="100"
       data-aos-duration="1000"
@@ -51,7 +51,7 @@ const ProfilePage = ({ session }) => {
         </span>{" "}
         Sign out
       </button>
-    </div>
+    </main>
   );
 };
 

@@ -2,9 +2,9 @@ import Slider from "./Slider";
 
 const HeroSection = () => {
   return (
-    <div className="">
+    <section>
       <Slider />
-    </div>
+    </section>
   );
 };
 

@@ -22,7 +22,7 @@ const Orders = ({ session, customer }) => {
 
   if (session) {
     return (
-      <div className="container mx-auto py-10 min-h-screen">
+      <main className="container mx-auto py-10 min-h-screen">
         <h2
           className="text-4xl font-semibold py-3"
           data-aos="fade-up"
@@ -34,12 +34,11 @@ const Orders = ({ session, customer }) => {
 
         <div className="flex flex-wrap  items-center gap-10">
           {customer.orders.map((order) => (
-            <>
+            <div key={order.id}>
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="100"
-                key={order.id}
                 className="grid items-center justify-center w-[38rem] h-80 shadow-md rounded-md space-y-1  p-5"
               >
                 <div ref={ref}>
@@ -86,10 +85,10 @@ const Orders = ({ session, customer }) => {
                   content={() => ref.current}
                 />
               </div>
-            </>
+            </div>
           ))}
         </div>
-      </div>
+      </main>
     );
   }
 };

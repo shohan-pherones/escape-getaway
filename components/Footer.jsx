@@ -6,7 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div
+    <footer
       data-aos="fade-up"
       data-aos-duration="2000"
       className="mt-14 flex flex-col gap-10 border-t py-10"
@@ -14,14 +14,17 @@ const Footer = () => {
       <div className="top flex w-full justify-between container mx-auto">
         <div>
           <p className="text-cyan-500 text-xl font-medium pb-3 hover:text-cyan-600 duration-300">
-            Escape-getway
+            Escape Getway
           </p>
-          <p className=" text-sm">
+          <p className="text-sm text-gray-400">
             Experience the Ultimate Travel Adventure <br /> with Our Unbeatable
             Package
           </p>
         </div>
-        <Link href="/" className="text-2xl text-gray-900/50 flex items-end">
+        <Link
+          href="/"
+          className="text-2xl text-gray-900/50 flex items-end hover:text-cyan-600 duration-300"
+        >
           <FaArrowCircleUp />
         </Link>
       </div>
@@ -95,7 +98,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </footer>
   );
 };
 

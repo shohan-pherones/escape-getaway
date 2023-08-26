@@ -41,7 +41,7 @@ const Faqs = ({}) => {
   };
 
   return (
-    <div
+    <main
       data-aos="fade-up"
       data-aos-duration="1000"
       className="container mx-auto justify-center items-center p-16 min-h-screen"
@@ -98,7 +98,7 @@ const Faqs = ({}) => {
           </div>
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 

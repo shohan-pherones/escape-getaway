@@ -5,11 +5,11 @@ import Testimonials from "./testimonials";
 
 const HomePage = ({ packages }) => {
   return (
-    <div>
+    <main>
       <HeroSection />
-      <Packeges packages={packages} />
+      <Packeges packages={packages} forHome />
       <Testimonials />
-    </div>
+    </main>
   );
 };
 

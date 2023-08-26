@@ -22,7 +22,7 @@ const Success = ({ session }) => {
 
   if (session) {
     return (
-      <div className="min-h-screen wrapper my-20 flex justify-center">
+      <main className="min-h-screen wrapper my-20 flex justify-center">
         <div className="text-center w-full lg:w-[50rem] flex flex-col items-center">
           <div className="flex justify-center items-center gap-2  text-2xl lg:text-3xl">
             <span className="text-green-500">
@@ -42,7 +42,7 @@ const Success = ({ session }) => {
             Go to your order
           </button>
         </div>
-      </div>
+      </main>
     );
   }
 };

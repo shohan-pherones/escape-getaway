@@ -16,7 +16,7 @@ const PackageDetails = ({ singlePackage }) => {
   };
 
   return (
-    <>
+    <main>
       {singlePackage && (
         <div>
           <div
@@ -69,7 +69,7 @@ const PackageDetails = ({ singlePackage }) => {
           </div>
         </div>
       )}
-    </>
+    </main>
   );
 };
 

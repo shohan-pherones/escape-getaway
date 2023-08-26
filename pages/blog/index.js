@@ -3,7 +3,7 @@ import { getAllBlog } from "@/prisma/blog";
 
 const BlogPage = ({ blogs }) => {
   return (
-    <div
+    <main
       data-aos="fade-up"
       data-aos-delay="100"
       data-aos-duration="1000"
@@ -14,7 +14,7 @@ const BlogPage = ({ blogs }) => {
           <BlogItem key={blog.id} blog={blog} />
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 

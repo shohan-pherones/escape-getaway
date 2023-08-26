@@ -8,7 +8,7 @@ const writerImg =
   "https://res.cloudinary.com/doo2ywmrb/image/upload/v1684302917/escape-getaway/1-lg_gzskno.webp";
 const BlogDetails = ({ singleBlog }) => {
   return (
-    <div className="my-16 container mx-auto px-5 lg:px-0 ">
+    <main className="my-16 container mx-auto px-5 lg:px-0 ">
       <div className="w-full lg:flex gap-10">
         <div
           data-aos="fade-right"
@@ -142,7 +142,7 @@ const BlogDetails = ({ singleBlog }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -73,7 +73,7 @@ const Checkout = ({ singlePackage }) => {
   };
 
   return (
-    <div className="container my-20 mx-auto grid 2xl:grid-cols-3 gap-10  xl:grid-cols-2 md:grid-cols-1">
+    <main className="container my-20 mx-auto grid 2xl:grid-cols-3 gap-10  xl:grid-cols-2 md:grid-cols-1">
       <div
         className="package-image 2xl:col-span-2 w-full h-[90vh] justify-center items-center bg-cover bg-no-repeat bg-center relative xl:col-span-1 hidden sm:block"
         style={{ backgroundImage: `url(${singlePackage.image}) ` }}
@@ -169,7 +169,7 @@ const Checkout = ({ singlePackage }) => {
           Checkout
         </button>
       </form>
-    </div>
+    </main>
   );
 };
 

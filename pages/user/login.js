@@ -28,7 +28,7 @@ const LoginPage = ({ session }) => {
 
   if (!session) {
     return (
-      <div className="min-h-screen my-20 flex flex-col gap-5 items-center">
+      <main className="min-h-screen my-20 flex flex-col gap-5 items-center">
         <h2 className="section-title uppercase font-medium text-2xl">
           You are not signed in.
         </h2>
@@ -41,7 +41,7 @@ const LoginPage = ({ session }) => {
           </span>{" "}
           Sign in with Google
         </button>
-      </div>
+      </main>
     );
   }
 };

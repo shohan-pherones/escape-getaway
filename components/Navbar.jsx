@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -15,10 +16,14 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   return (
-    <div className="px-5 md:px-0">
-      <div className="container mx-auto flex h-[5rem]  items-center justify-between relative">
-        <div className="logo text-xl  md:text-2xl font-semibold text-cyan-500">
-          <Link href="/">Escape-getaway</Link>
+    <header
+      data-aos="fade-down"
+      data-aos-duration="2000"
+      className="px-5 md:px-0 fixed top-0 left-0 right-0 w-full z-[100] bg-white/80 border-b backdrop-blur-lg h-[5rem] flex items-center"
+    >
+      <div className="container mx-auto flex items-center justify-between relative">
+        <div className="logo text-xl md:text-2xl font-semibold text-cyan-500">
+          <Link href="/">Escape Getaway</Link>
         </div>
         <div className="nav-links hidden lg:block">
           <ul className="flex gap-5 items-center justify-center text-sm md:text-lg">
@@ -75,7 +80,7 @@ const Navbar = () => {
               {!session ? (
                 <Link
                   href="/user/login"
-                  className="font-semibold text-white bg-cyan-500 py-3 px-5 rounded hover:bg-cyan-600 duration-300"
+                  className="font-semibold text-white bg-cyan-500 py-3 px-5 rounded-lg hover:bg-cyan-600 duration-300"
                 >
                   Sign in
                 </Link>
@@ -92,11 +97,11 @@ const Navbar = () => {
         </div>
 
         {/* hamburger button */}
-        <div className=" flex lg:hidden">
+        <div className="flex lg:hidden">
           <button
             type="button"
             onClick={handleMenu}
-            className="inline-flex  absolute right-0 top-6  focus:outline-none   p-2 z-[999]"
+            className="inline-flex  focus:outline-none p-2 z-[102]"
           >
             <span className="sr-only">Open Main Menu</span>
             {open == true ? <FaTimes /> : <FaBars />}
@@ -110,7 +115,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <div
               onClick={handleOpen}
-              className={`w-screen h-screen fixed z-[900] bg-black/50 backdrop-blur-lg top-0 left-0 right-0 bottom-0 flex text-white justify-center items-center ${
+              className={`w-screen h-screen fixed z-[101] bg-white top-0 left-0 right-0 bottom-0 flex text-black justify-center items-center ${
                 setOpen ? `` : "hidden"
               }`}
             >
@@ -168,7 +173,7 @@ const Navbar = () => {
                   {!session ? (
                     <Link
                       href="/user/login"
-                      className="font-semibold text-white bg-cyan-500 py-3 px-5 rounded hover:bg-cyan-600 duration-300"
+                      className="font-semibold text-white bg-cyan-500 py-3 px-5 rounded-lg hover:bg-cyan-600 duration-300"
                     >
                       Sign in
                     </Link>
@@ -186,7 +191,7 @@ const Navbar = () => {
           </div>
         ) : null}
       </div>
-    </div>
+    </header>
   );
 };
 
